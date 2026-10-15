@@ -20,7 +20,7 @@ The initial foundation is implemented and tested. It supports local Qwen generat
 
 See [evidence/README.md](evidence/README.md), [test summary](evidence/infrastructure-tests.json), and [full test output](evidence/infrastructure-tests.txt). These results were produced by QASC in this repository. The earlier seven-language, CUDA, Anaconda bridge, and other `I:\LocalAI` findings are reference history and are not claimed as QASC tests. No changes or server restarts were made in `I:\LocalAI`.
 
-The actual GitHub creation response is preserved in [github-publication.json](evidence/github-publication.json). The initial commit's [hosted Windows/Linux Python 3.11/3.13 matrix](https://github.com/chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR/actions/runs/38734653908) passed all four jobs. The subsequent Python 3.11 junction hardening has passed local validation; its hosted rerun is recorded separately when complete.
+The actual GitHub creation response is preserved in [github-publication.json](evidence/github-publication.json). The final implementation commit `38e56a6` passed all four jobs in the [hosted Windows/Linux Python 3.11/3.13 matrix](https://github.com/chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR/actions/runs/38735157299), including the junction hardening. See [github-ci.json](evidence/github-ci.json) for the actual hosted response. The Windows-only junction test is skipped on Linux. Subsequent publication-evidence updates contain documentation only.
 
 ## Implemented architecture
 

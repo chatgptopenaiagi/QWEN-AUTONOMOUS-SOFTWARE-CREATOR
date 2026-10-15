@@ -13,6 +13,7 @@ These are actual executions by this repository on 2026-10-15, separate from the 
 - `delivery-smoke.json`: execution of the delivered source after extracting it to a separate directory.
 - `wheel-install.json`: QASC wheel installation into a separate virtual environment with `--no-index --no-deps`, followed by a successful installed CLI version check.
 - `github-publication.json`: actual GitHub repository response after successful publication (added only after publication succeeds).
+- `github-ci.json`: successful hosted validation for implementation commit `38e56a6`, across Windows/Linux and Python 3.11/3.13. The Windows-only junction test is skipped on Linux.
 
 The demonstration requirement and acceptance examples were authored by Codex as validation fixtures under the user's platform-building mission. They are not a separate human-authored application request. The original create receipt predates explicit fixture provenance annotation; final state and the fault-injection record identify their origin. The application's source and unit tests were produced by the local Qwen model. The injected defect is an intentional Codex validation fault, not a defect attributed to the original Qwen generation. QASC infrastructure, test fixtures, and this evidence selection were authored by Codex.
 
