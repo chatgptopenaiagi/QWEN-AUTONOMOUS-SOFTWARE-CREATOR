@@ -6,7 +6,7 @@ The initial foundation is implemented and tested. It supports local Qwen generat
 
 | Area | Actual result |
 | --- | --- |
-| Repository | Local Git repository initialized on `main`; private GitHub creation and push pending final publication step |
+| Repository | [chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR](https://github.com/chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR) created as **PRIVATE**; initial commit `ef15627` successfully pushed to `main`; GitHub API confirmed the repository and visibility |
 | Python package | QASC 0.1.0, Python >=3.11, no third-party runtime dependencies; editable installation, wheel build, and offline wheel installation into a separate virtual environment succeeded |
 | CLI | `doctor`, `models`, `create`, `test`, `status`, `resume`, `package` implemented |
 | Model connectivity | Existing `http://127.0.0.1:8080` responded healthy; served model `qwen3-coder-local`; context 8192 |
@@ -16,9 +16,11 @@ The initial foundation is implemented and tested. It supports local Qwen generat
 | Correction | A recorded intentional uppercase fault failed verification; a fresh `resume` invocation obtained one Qwen correction and passed the same checks |
 | Continuity | Two source revisions and two verified snapshots preserved; model exchanges, failure details, and execution receipts retained |
 | Delivery | Source ZIP created and checked using archive integrity and per-file hashes; extracted copy printed the expected `HELLO, ADA!`; no native executable or installer claimed |
-| Infrastructure checks | **88 tests passed**, exit code 0, Windows / CPython 3.15.0 / PowerShell 7.6.6 |
+| Infrastructure checks | **89 tests passed**, exit code 0, Windows / CPython 3.15.0 / PowerShell 7.6.6; includes a real Windows junction isolation regression |
 
 See [evidence/README.md](evidence/README.md), [test summary](evidence/infrastructure-tests.json), and [full test output](evidence/infrastructure-tests.txt). These results were produced by QASC in this repository. The earlier seven-language, CUDA, Anaconda bridge, and other `I:\LocalAI` findings are reference history and are not claimed as QASC tests. No changes or server restarts were made in `I:\LocalAI`.
+
+The actual GitHub creation response is preserved in [github-publication.json](evidence/github-publication.json). The initial commit's [hosted Windows/Linux Python 3.11/3.13 matrix](https://github.com/chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR/actions/runs/38734653908) passed all four jobs. The subsequent Python 3.11 junction hardening has passed local validation; its hosted rerun is recorded separately when complete.
 
 ## Implemented architecture
 

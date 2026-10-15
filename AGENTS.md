@@ -4,7 +4,7 @@ QASC is a local-first software creation platform. Keep the distinction between t
 
 ## Scope and neighboring projects
 
-- Work inside `I:\QWEN-AUTONOMOUS-SOFTWARE-CREATOR` unless the user explicitly authorizes another location.
+- Keep repository and generated-project changes inside `I:\QWEN-AUTONOMOUS-SOFTWARE-CREATOR` unless the user authorizes another location. Disposable test fixtures may use the operating system's temporary directory.
 - Do not modify, move, delete, restructure, or restart anything in `I:\LocalAI`. Another engineering session owns that installation. Read-only inspection and requests to its existing local inference API are allowed.
 - Do not install or replace Codex CLI as part of QASC work.
 - Inspect existing local and remote repository state before publishing changes. Do not overwrite unrelated work or replace an existing repository.

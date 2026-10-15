@@ -169,6 +169,36 @@ class ProjectTests(unittest.TestCase):
                 safe_path(self.project.path, "linked-dir/outside.py")
             self.assertEqual((external / "outside.py").read_text(), "outside")
 
+    @unittest.skipUnless(os.name == "nt", "Windows junction regression")
+    def test_windows_junctions_inside_allowed_roots_are_rejected(self):
+        import _winapi
+        if not hasattr(_winapi, "CreateJunction"):
+            self.skipTest("Windows junction creation API is unavailable")
+        other = Project(self.root, "junction-target")
+        other.initialize("A separate project that must remain independent.", {})
+        project_link = self.root / "junction-project"
+        nested_target = self.project.path / "actual-directory"
+        nested_target.mkdir()
+        marker = nested_target / "main.py"
+        marker.write_text("operator-owned content")
+        nested_link = self.project.path / "junction-directory"
+        try:
+            _winapi.CreateJunction(str(other.path), str(project_link))
+            self.addCleanup(os.rmdir, project_link)
+            _winapi.CreateJunction(str(nested_target), str(nested_link))
+            self.addCleanup(os.rmdir, nested_link)
+        except OSError as exc:
+            self.skipTest(f"Windows junction creation unavailable: {exc}")
+        # Both targets remain inside their allowed roots, so containment alone
+        # cannot detect these aliases. Python 3.11 lacks Path.is_junction().
+        self.assertTrue(project_link.resolve().is_relative_to(self.root.resolve()))
+        self.assertTrue(nested_link.resolve().is_relative_to(self.project.path.resolve()))
+        with self.assertRaises(ProjectError):
+            Project(self.root, "junction-project")
+        with self.assertRaises(ProjectError):
+            safe_path(self.project.path, "junction-directory/main.py")
+        self.assertEqual(marker.read_text(), "operator-owned content")
+
     def test_operation_lock_prevents_concurrent_mutation_and_releases_on_exception(self):
         with self.assertRaisesRegex(RuntimeError, "fixture interruption"):
             with self.project.lock():

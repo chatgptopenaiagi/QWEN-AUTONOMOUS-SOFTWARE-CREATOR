@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-15T12:25:31.116696+00:00",
+  "at": "2026-10-15T12:29:59.293832+00:00",
   "wheel_name": "qasc-0.1.0-py3-none-any.whl",
-  "sha256": "d6da00b76844a8cc3e3f98aaa803db3be6a56d564f344169fc38697f26c6a438",
-  "installation": "pip install --no-index --no-deps into separate new venv",
+  "sha256": "3b8a081b38f00b4bf82312f5e7f14818e360c9cc2499e5e95dfafa48d599926f",
+  "installation": "pip install --no-index --no-deps --force-reinstall in the separate wheel-validation venv",
   "command": [
     "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qasc-wheel-install\\Scripts\\qasc.exe",
     "--version"

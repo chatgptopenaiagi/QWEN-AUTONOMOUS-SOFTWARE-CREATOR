@@ -2,7 +2,7 @@
 
 These are actual executions by this repository on 2026-10-15, separate from the historical findings in `I:\LocalAI`.
 
-- `infrastructure-tests.json` and `.txt`: 88 infrastructure tests, exit code 0. Model calls in these tests use deterministic fixtures or a loopback HTTP server; generated application execution uses real child processes.
+- `infrastructure-tests.json` and `.txt`: 89 infrastructure tests, exit code 0. Model calls in these tests use deterministic fixtures or a loopback HTTP server; generated application execution uses real child processes.
 - `doctor.json` and `models.json`: read-only inventory and healthy local Qwen endpoint, model `qwen3-coder-local`, context 8192.
 - `live-create.json`: real Qwen generation of three source files; four model-generated tests and three separate acceptance cases passed.
 - `live-fault-status.json`: status after a deliberate, recorded change from `greeting.upper()` to `greeting.lower()`.

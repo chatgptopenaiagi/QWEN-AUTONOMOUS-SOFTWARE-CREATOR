@@ -130,4 +130,4 @@ QASC uses the existing server when available. It does not alter `I:\LocalAI`, mo
 | [Project continuity](docs/PROJECT_CONTINUITY.md) | Persistent records, snapshots, and resume |
 | [SCE integration](docs/INTEGRATION_WITH_SCE.md) | Planned integration boundary and open contracts |
 
-Repository identity: `chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR`. Publication and initial private visibility must be confirmed by the successful GitHub result recorded in [PROJECT_STATUS.md](PROJECT_STATUS.md).
+Repository: [chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR](https://github.com/chatgptopenaiagi/QWEN-AUTONOMOUS-SOFTWARE-CREATOR), created as **private** and successfully pushed. See [PROJECT_STATUS.md](PROJECT_STATUS.md) for the actual publication and validation evidence.

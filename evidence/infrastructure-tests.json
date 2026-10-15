@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-10-15T12:22:00.194282+00:00",
-  "finished_at": "2026-10-15T12:22:25.674552+00:00",
+  "started_at": "2026-10-15T12:29:09.267310+00:00",
+  "finished_at": "2026-10-15T12:29:45.787154+00:00",
   "command": [
     "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
     "-m",
@@ -11,12 +11,12 @@
     "-v"
   ],
   "cwd": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR",
-  "elapsed_seconds": 25.48,
+  "elapsed_seconds": 36.52,
   "exit_code": 0,
-  "tests_run": 88,
+  "tests_run": 89,
   "passed": true,
   "output_file": "infrastructure-tests.txt",
-  "output_sha256": "2fb26cf395b2e142048c23c442a7ff7568ef2dc897a481015253b4dc837fcaf4",
+  "output_sha256": "6016d284716d3bc521bf3e38c99972873dbdd1c22863e73f6dfe9dee8deabcd3",
   "provenance": "actual_qasc_infrastructure_test_execution",
   "model_fixtures": "Scripted/loopback fixtures in infrastructure tests; live Qwen evidence is separate"
 }

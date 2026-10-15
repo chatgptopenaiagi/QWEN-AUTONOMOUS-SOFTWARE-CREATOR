@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import stat
 import tempfile
 import uuid
 
@@ -65,7 +66,13 @@ def atomic_source(path: Path, data: bytes) -> None:
 
 
 def linked(path: Path) -> bool:
-    return path.is_symlink() or (hasattr(path, "is_junction") and path.is_junction())
+    try:
+        info = path.lstat()
+    except FileNotFoundError:
+        return False
+    # Python 3.11 does not expose Path.is_junction. Check reparse attributes
+    # directly so junctions cannot alias a second project within the same root.
+    return stat.S_ISLNK(info.st_mode) or bool(getattr(info, "st_file_attributes", 0) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400))
 
 
 def safe_path(root: Path, relative: str) -> Path:
