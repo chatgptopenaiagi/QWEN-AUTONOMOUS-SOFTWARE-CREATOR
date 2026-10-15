@@ -1,0 +1,89 @@
+{
+  "verification": {
+    "id": "ac278d2b872c",
+    "at": "2026-10-15T12:19:08.650864+00:00",
+    "revision": "0001-53a84561",
+    "passed": true,
+    "unit_tests_passed": true,
+    "unit_test_count": 4,
+    "unit_receipt_id": "ecd6f0681c2e4ca78626cdaad006de7d",
+    "acceptance_cases": [
+      {
+        "name": "ordinary name",
+        "passed": true,
+        "receipt_id": "05cef8608d394360adf151e68c8cfe53",
+        "mismatches": []
+      },
+      {
+        "name": "uppercase",
+        "passed": true,
+        "receipt_id": "b45d71cda95d456ba68f96b42f4471c4",
+        "mismatches": []
+      },
+      {
+        "name": "Unicode",
+        "passed": true,
+        "receipt_id": "c75cb65d5e0f4e74933f507eaea2f945",
+        "mismatches": []
+      }
+    ],
+    "independent_acceptance_passed": true,
+    "source_unchanged": true,
+    "source_fingerprint": "86edfe3af02db42874f67b9f3c8c0ad9eb976d01ba6fe75f41b3a6099bc09b37",
+    "scope": "operator_acceptance_and_model_tests",
+    "unit_feedback": {
+      "stdout": "",
+      "stderr": "test_regular_name (test_greeting.TestGreeting.test_regular_name) ... ok\r\ntest_unicode (test_greeting.TestGreeting.test_unicode) ... ok\r\ntest_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase) ... ok\r\ntest_uppercase (test_greeting.TestGreeting.test_uppercase) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.000s\r\n\r\nOK\r\n",
+      "exit_code": 0,
+      "timed_out": false,
+      "error": null
+    }
+  },
+  "files": [
+    {
+      "path": "app.py",
+      "content": "import argparse\nfrom greeting import greet\n\ndef main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"name\", help=\"The name to greet\")\n    parser.add_argument(\"--upper\", action=\"store_true\", help=\"Uppercase the greeting\")\n    args = parser.parse_args()\n    print(greet(args.name, args.upper))\n\nif __name__ == \"__main__\":\n    main()"
+    },
+    {
+      "path": "greeting.py",
+      "content": "def greet(name, uppercase=False):\n    greeting = f\"Hello, {name}!\"\n    if uppercase:\n        greeting = greeting.upper()\n    return greeting"
+    },
+    {
+      "path": "tests/test_greeting.py",
+      "content": "import unittest\nimport tempfile\nimport os\nimport sys\n\n# Add the project root to the path so we can import greeting\nsys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + \"/..\")\n\nfrom greeting import greet\n\nclass TestGreeting(unittest.TestCase):\n    def test_regular_name(self):\n        self.assertEqual(greet(\"Ada\"), \"Hello, Ada!\")\n    \n    def test_uppercase(self):\n        self.assertEqual(greet(\"Ada\", uppercase=True), \"HELLO, ADA!\")\n    \n    def test_unicode(self):\n        self.assertEqual(greet(\"Zoë\"), \"Hello, Zoë!\")\n    \n    def test_unicode_uppercase(self):\n        self.assertEqual(greet(\"Zoë\", uppercase=True), \"HELLO, ZOË!\")"
+    }
+  ],
+  "acceptance": {
+    "cases": [
+      {
+        "name": "ordinary name",
+        "args": [
+          "Ada"
+        ],
+        "stdout": "Hello, Ada!\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "name": "uppercase",
+        "args": [
+          "Ada",
+          "--upper"
+        ],
+        "stdout": "HELLO, ADA!\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "name": "Unicode",
+        "args": [
+          "Zoë"
+        ],
+        "stdout": "Hello, Zoë!\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    ],
+    "provenance": "operator_supplied_verification"
+  }
+}

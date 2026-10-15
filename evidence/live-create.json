@@ -1,0 +1,68 @@
+{
+  "name": "qwen-greeting",
+  "path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting",
+  "status": "verified",
+  "revision": "0001-53a84561",
+  "requirements": [
+    "Create a command-line greeting application with entrypoint app.py",
+    "Accept exactly one required positional argument called name",
+    "Print 'Hello, <name>!' followed by a newline",
+    "Support optional --upper flag to uppercase the entire greeting",
+    "Put reusable greeting logic in greeting.py",
+    "Use argparse in app.py",
+    "Provide unittest tests in tests/test_greeting.py",
+    "Use only Python standard library"
+  ],
+  "entrypoint": "app.py",
+  "files": [
+    "app.py",
+    "greeting.py",
+    "tests/test_greeting.py"
+  ],
+  "last_verification": {
+    "id": "ac278d2b872c",
+    "at": "2026-10-15T12:19:08.650864+00:00",
+    "revision": "0001-53a84561",
+    "passed": true,
+    "unit_tests_passed": true,
+    "unit_test_count": 4,
+    "unit_receipt_id": "ecd6f0681c2e4ca78626cdaad006de7d",
+    "acceptance_cases": [
+      {
+        "name": "ordinary name",
+        "passed": true,
+        "receipt_id": "05cef8608d394360adf151e68c8cfe53",
+        "mismatches": []
+      },
+      {
+        "name": "uppercase",
+        "passed": true,
+        "receipt_id": "b45d71cda95d456ba68f96b42f4471c4",
+        "mismatches": []
+      },
+      {
+        "name": "Unicode",
+        "passed": true,
+        "receipt_id": "c75cb65d5e0f4e74933f507eaea2f945",
+        "mismatches": []
+      }
+    ],
+    "independent_acceptance_passed": true,
+    "source_unchanged": true,
+    "source_fingerprint": "86edfe3af02db42874f67b9f3c8c0ad9eb976d01ba6fe75f41b3a6099bc09b37",
+    "scope": "operator_acceptance_and_model_tests",
+    "unit_feedback": {
+      "stdout": "",
+      "stderr": "test_regular_name (test_greeting.TestGreeting.test_regular_name) ... ok\r\ntest_unicode (test_greeting.TestGreeting.test_unicode) ... ok\r\ntest_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase) ... ok\r\ntest_uppercase (test_greeting.TestGreeting.test_uppercase) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.000s\r\n\r\nOK\r\n",
+      "exit_code": 0,
+      "timed_out": false,
+      "error": null
+    }
+  },
+  "verification_matches_current_source": true,
+  "corrections": 0,
+  "verified_versions": 1,
+  "unresolved_problems": [],
+  "metadata_path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc",
+  "updated_at": "2026-10-15T12:19:08.699475+00:00"
+}

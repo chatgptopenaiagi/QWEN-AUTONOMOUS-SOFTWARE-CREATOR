@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qasc"
+version = "0.1.0"
+description = "Local-first autonomous software creation with execution evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "QASC contributors"}]
+dependencies = []
+
+[project.scripts]
+qasc = "qasc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,204 @@
+{
+  "qasc_version": "0.1.0",
+  "adapters": [
+    {
+      "adapter": "llama.cpp-openai-compatible",
+      "base_url": "http://127.0.0.1:8080",
+      "model": "qwen3-coder-local",
+      "model_ids": [
+        "qwen3-coder-local"
+      ],
+      "available": true,
+      "context_size": 8192,
+      "capabilities": {
+        "text_generation": true,
+        "structured_responses": true,
+        "tool_call_requests": true,
+        "token_accounting_when_available": true,
+        "inference_timings_when_available": true
+      },
+      "health": {
+        "status": "ok"
+      },
+      "errors": {}
+    }
+  ],
+  "discovery": {
+    "platform": {
+      "system": "Windows",
+      "release": "10",
+      "machine": "AMD64"
+    },
+    "python": {
+      "executable": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
+      "version": "3.15.0",
+      "implementation": "CPython"
+    },
+    "tools": {
+      "python": {
+        "available": true,
+        "path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
+        "version": "Python 3.15.0",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "anaconda": {
+        "available": true,
+        "path": "C:\\Users\\Administrator\\anaconda3\\Library\\bin\\conda.BAT",
+        "version": "conda 26.7.2",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "powershell": {
+        "available": true,
+        "path": "C:\\Program Files\\PowerShell\\7\\pwsh.EXE",
+        "version": "7.6.6",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "node": {
+        "available": true,
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "version": "v26.12.0",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "npm": {
+        "available": true,
+        "path": "C:\\Program Files\\nodejs\\npm.CMD",
+        "version": "12.1.0",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "git": {
+        "available": true,
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "version": "git version 2.55.0.windows.5",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "github_cli": {
+        "available": true,
+        "path": "C:\\Program Files\\GitHub CLI\\gh.EXE",
+        "version": "gh version 2.100.0 (2026-09-03)",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "gcc": {
+        "available": false,
+        "path": null,
+        "version": null,
+        "error": "Not found on PATH or in checked standard installation locations"
+      },
+      "g++": {
+        "available": false,
+        "path": null,
+        "version": null,
+        "error": "Not found on PATH or in checked standard installation locations"
+      },
+      "clang": {
+        "available": true,
+        "path": "C:\\Program Files\\LLVM\\bin\\clang.EXE",
+        "version": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "clang++": {
+        "available": true,
+        "path": "C:\\Program Files\\LLVM\\bin\\clang++.EXE",
+        "version": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "msvc": {
+        "available": false,
+        "path": null,
+        "version": null,
+        "error": "Not found on PATH or in checked standard installation locations"
+      },
+      "cmake": {
+        "available": true,
+        "path": "C:\\Program Files\\CMake\\bin\\cmake.EXE",
+        "version": "cmake version 4.4.3",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "ninja": {
+        "available": true,
+        "path": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WinGet\\Links\\ninja.EXE",
+        "version": "1.13.2",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "rust": {
+        "available": true,
+        "path": "C:\\Users\\Administrator\\.cargo\\bin\\rustc.EXE",
+        "version": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "cargo": {
+        "available": true,
+        "path": "C:\\Users\\Administrator\\.cargo\\bin\\cargo.EXE",
+        "version": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "dotnet": {
+        "available": true,
+        "path": "C:\\Program Files\\dotnet\\dotnet.EXE",
+        "version": "11.0.100-preview.7.26381.103",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "pyinstaller": {
+        "available": true,
+        "path": "C:\\Python314\\Scripts\\pyinstaller.EXE",
+        "version": "6.22.3",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "nuitka": {
+        "available": true,
+        "path": "C:\\Python314\\Scripts\\nuitka.CMD",
+        "version": "4.2.2",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "wix": {
+        "available": true,
+        "path": "C:\\Users\\Administrator\\.dotnet\\tools\\wix.EXE",
+        "version": "7.0.0+b8977d6",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "inno_setup": {
+        "available": false,
+        "path": null,
+        "version": null,
+        "error": "Not found on PATH or in checked standard installation locations"
+      },
+      "nsis": {
+        "available": true,
+        "path": "C:\\Program Files (x86)\\NSIS\\makensis.exe",
+        "version": "v3.12",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "7zip": {
+        "available": true,
+        "path": "C:\\Program Files\\7-Zip\\7z.exe",
+        "version": "7-Zip 26.03 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-09-03",
+        "error": null,
+        "probe_exit_code": 0
+      },
+      "windows_sdk": {
+        "available": false,
+        "path": null,
+        "version": null,
+        "error": "Not found on PATH or in checked standard installation locations"
+      }
+    }
+  },
+  "execution_policy": "Project cwd and local temp, no shell, bounded timeout; current user permissions, no OS sandbox"
+}

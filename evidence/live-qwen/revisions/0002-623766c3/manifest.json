@@ -1,0 +1,28 @@
+{
+  "revision": "0002-623766c3",
+  "created_at": "2026-10-15T12:22:37.078690+00:00",
+  "provenance": {
+    "kind": "ai_generated_application",
+    "model": "qwen3-coder-local",
+    "call_id": "correcting-7dc181f91482"
+  },
+  "files": [
+    {
+      "path": "app.py",
+      "sha256": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa"
+    },
+    {
+      "path": "greeting.py",
+      "sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04"
+    },
+    {
+      "path": "tests/test_greeting.py",
+      "sha256": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+    }
+  ],
+  "before_hashes": {
+    "app.py": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa",
+    "greeting.py": "2f8abd22572fa8e00ddc425df3a4593c01251e9366d68ad8b757c12a00067314",
+    "tests/test_greeting.py": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+  }
+}

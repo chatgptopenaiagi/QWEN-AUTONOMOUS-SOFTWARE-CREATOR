@@ -1,0 +1,46 @@
+{
+  "id": "2a563970707a",
+  "at": "2026-10-15T12:19:55.480062+00:00",
+  "revision": "0001-53a84561",
+  "passed": false,
+  "unit_tests_passed": false,
+  "unit_test_count": 4,
+  "unit_receipt_id": "348ed03051f047ac9d63100859bdea1a",
+  "acceptance_cases": [
+    {
+      "name": "ordinary name",
+      "passed": true,
+      "receipt_id": "f4d56c98f17942058266e697e77c5c67",
+      "mismatches": []
+    },
+    {
+      "name": "uppercase",
+      "passed": false,
+      "receipt_id": "f6b4f216d13d417bb7477a1c26732787",
+      "mismatches": [
+        {
+          "field": "stdout",
+          "expected": "HELLO, ADA!\n",
+          "actual": "hello, ada!\n"
+        }
+      ]
+    },
+    {
+      "name": "Unicode",
+      "passed": true,
+      "receipt_id": "75b1302efdd646afab552da0637c9131",
+      "mismatches": []
+    }
+  ],
+  "independent_acceptance_passed": false,
+  "source_unchanged": true,
+  "source_fingerprint": "d43400645ab1849320a300d4ccaa5a195cdfdbc3d3ad3774f498123265771fe9",
+  "scope": "operator_acceptance_and_model_tests",
+  "unit_feedback": {
+    "stdout": "",
+    "stderr": "test_regular_name (test_greeting.TestGreeting.test_regular_name) ... ok\r\ntest_unicode (test_greeting.TestGreeting.test_unicode) ... ok\r\ntest_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase) ... FAIL\r\ntest_uppercase (test_greeting.TestGreeting.test_uppercase) ... FAIL\r\n\r\n======================================================================\r\nFAIL: test_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\tests\\test_greeting.py\", line 22, in test_unicode_uppercase\r\n    self.assertEqual(greet(\"Zoë\", uppercase=True), \"HELLO, ZOË!\")\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: 'hello, zoë!' != 'HELLO, ZOË!'\r\n- hello, zoë!\r\n+ HELLO, ZOË!\r\n\r\n\r\n======================================================================\r\nFAIL: test_uppercase (test_greeting.TestGreeting.test_uppercase)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\tests\\test_greeting.py\", line 16, in test_uppercase\r\n    self.assertEqual(greet(\"Ada\", uppercase=True), \"HELLO, ADA!\")\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: 'hello, ada!' != 'HELLO, ADA!'\r\n- hello, ada!\r\n+ HELLO, ADA!\r\n\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.004s\r\n\r\nFAILED (failures=2)\r\n",
+    "exit_code": 1,
+    "timed_out": false,
+    "error": null
+  }
+}

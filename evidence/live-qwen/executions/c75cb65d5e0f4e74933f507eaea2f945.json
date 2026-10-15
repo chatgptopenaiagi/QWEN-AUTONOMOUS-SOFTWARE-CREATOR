@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "receipt_id": "c75cb65d5e0f4e74933f507eaea2f945",
+  "id": "c75cb65d5e0f4e74933f507eaea2f945",
+  "command": [
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-X",
+    "pycache_prefix=I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\runtime\\2f8c4cff3eee4febb7ef8ec41d99c36e",
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\app.py",
+    "Zoë"
+  ],
+  "cwd": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting",
+  "started_at": "2026-10-15T12:19:08.427705Z",
+  "finished_at": "2026-10-15T12:19:08.623139Z",
+  "elapsed_seconds": 0.195416,
+  "timeout_seconds": 30,
+  "stdin": null,
+  "stdout": "Hello, Zoë!\r\n",
+  "stderr": "",
+  "stdout_truncated": false,
+  "stderr_truncated": false,
+  "stdout_bytes": 14,
+  "stderr_bytes": 0,
+  "exit_code": 0,
+  "timed_out": false,
+  "error": null,
+  "capture_errors": [],
+  "capture_incomplete": false,
+  "termination_error": null,
+  "changes": {
+    "added": [],
+    "modified": [],
+    "deleted": []
+  },
+  "inventory_errors": {
+    "before": [],
+    "after": []
+  },
+  "receipt_path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\executions\\c75cb65d5e0f4e74933f507eaea2f945.json"
+}

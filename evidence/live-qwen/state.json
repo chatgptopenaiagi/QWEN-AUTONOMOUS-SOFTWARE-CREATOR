@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "name": "qwen-greeting",
+  "created_at": "2026-10-15T12:17:17.809852+00:00",
+  "updated_at": "2026-10-15T12:24:23.349186+00:00",
+  "status": "verified",
+  "request": "Create a small Python command-line greeting application. Its entrypoint must be app.py.\nAccept exactly one required positional argument called name. Print Hello, <name>! followed by a newline.\nSupport an optional --upper flag that uppercases the entire greeting.\nPut reusable greeting logic in greeting.py and use argparse in app.py.\nProvide unittest tests in tests/test_greeting.py for regular names, Unicode, and uppercase output.\nUse only the Python standard library.\n",
+  "request_provenance": "codex_authored_validation_fixture",
+  "adapter": {
+    "id": "llama.cpp-openai-compatible",
+    "base_url": "http://127.0.0.1:8080",
+    "model": null,
+    "timeout": 180,
+    "max_tokens": 3000
+  },
+  "requirements": [
+    "Create a command-line greeting application with entrypoint app.py",
+    "Accept exactly one required positional argument called name",
+    "Print 'Hello, <name>!' followed by a newline",
+    "Support optional --upper flag to uppercase the entire greeting",
+    "Put reusable greeting logic in greeting.py",
+    "Use argparse in app.py",
+    "Provide unittest tests in tests/test_greeting.py",
+    "Use only Python standard library"
+  ],
+  "acceptance_criteria": [
+    "app.py must accept exactly one required positional argument 'name'",
+    "app.py must print 'Hello, <name>!' followed by newline",
+    "app.py must support --upper flag to uppercase output",
+    "greeting.py must contain reusable greeting logic",
+    "app.py must use argparse for argument parsing",
+    "tests/test_greeting.py must test regular names, Unicode, and uppercase output",
+    "All tests must pass using python -m unittest discover -s tests -v"
+  ],
+  "architecture": "The application consists of three files:\n1. app.py - The main entrypoint that uses argparse to parse arguments and calls greeting logic\n2. greeting.py - Contains reusable greeting functions\n3. tests/test_greeting.py - Unit tests for the greeting functionality\n\nThe app.py file parses command line arguments using argparse, then calls the greeting function from greeting.py. The greeting.py file contains the core logic for generating greetings, with an option to uppercase the result.",
+  "entrypoint": "app.py",
+  "files": [
+    "app.py",
+    "greeting.py",
+    "tests/test_greeting.py"
+  ],
+  "revision": "0002-623766c3",
+  "history": [
+    {
+      "revision": "0001-53a84561",
+      "created_at": "2026-10-15T12:19:06.894667+00:00",
+      "provenance": {
+        "kind": "ai_generated_application",
+        "model": "qwen3-coder-local",
+        "call_id": "generating-8a6eb78ee9b8"
+      },
+      "files": [
+        {
+          "path": "app.py",
+          "sha256": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa"
+        },
+        {
+          "path": "greeting.py",
+          "sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04"
+        },
+        {
+          "path": "tests/test_greeting.py",
+          "sha256": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+        }
+      ],
+      "before_hashes": {}
+    },
+    {
+      "revision": "0002-623766c3",
+      "created_at": "2026-10-15T12:22:37.078690+00:00",
+      "provenance": {
+        "kind": "ai_generated_application",
+        "model": "qwen3-coder-local",
+        "call_id": "correcting-7dc181f91482"
+      },
+      "files": [
+        {
+          "path": "app.py",
+          "sha256": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa"
+        },
+        {
+          "path": "greeting.py",
+          "sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04"
+        },
+        {
+          "path": "tests/test_greeting.py",
+          "sha256": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+        }
+      ],
+      "before_hashes": {
+        "app.py": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa",
+        "greeting.py": "2f8abd22572fa8e00ddc425df3a4593c01251e9366d68ad8b757c12a00067314",
+        "tests/test_greeting.py": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+      }
+    }
+  ],
+  "executions": [
+    "ecd6f0681c2e4ca78626cdaad006de7d",
+    "05cef8608d394360adf151e68c8cfe53",
+    "b45d71cda95d456ba68f96b42f4471c4",
+    "c75cb65d5e0f4e74933f507eaea2f945",
+    "348ed03051f047ac9d63100859bdea1a",
+    "f4d56c98f17942058266e697e77c5c67",
+    "f6b4f216d13d417bb7477a1c26732787",
+    "75b1302efdd646afab552da0637c9131",
+    "374898d1bc3b43fdb7fabe3e41e57678",
+    "6a30c869efa54e0e9451151fb7bad528",
+    "568854161558486586c3e6e7e40604fa",
+    "a085466080ed4228890b6758bac6d157"
+  ],
+  "failures": [
+    {
+      "at": "2026-10-15T12:19:55.503701+00:00",
+      "stage": "verification",
+      "verification_id": "2a563970707a",
+      "error": "Configured tests failed, no tests ran, or managed sources changed during execution"
+    }
+  ],
+  "corrections": [
+    {
+      "at": "2026-10-15T12:22:37.494518+00:00",
+      "revision": "0002-623766c3",
+      "diagnosis": "The greeting.py file has a logic error in the greet function. When uppercase=True, it's calling greeting.lower() instead of greeting.upper(), which causes the greeting to be lowercased instead of uppercased.",
+      "paths": [
+        "greeting.py"
+      ],
+      "before_fingerprint": "d43400645ab1849320a300d4ccaa5a195cdfdbc3d3ad3774f498123265771fe9",
+      "after_fingerprint": "86edfe3af02db42874f67b9f3c8c0ad9eb976d01ba6fe75f41b3a6099bc09b37",
+      "feedback_id": "2a563970707a"
+    }
+  ],
+  "verified_revisions": [
+    {
+      "id": "0001-53a84561-ac278d2b872c",
+      "revision": "0001-53a84561",
+      "verification_id": "ac278d2b872c",
+      "scope": "operator_acceptance_and_model_tests"
+    },
+    {
+      "id": "0002-623766c3-cec26198ab4a",
+      "revision": "0002-623766c3",
+      "verification_id": "cec26198ab4a",
+      "scope": "operator_acceptance_and_model_tests"
+    }
+  ],
+  "last_verification": {
+    "id": "cec26198ab4a",
+    "at": "2026-10-15T12:22:38.789834+00:00",
+    "revision": "0002-623766c3",
+    "passed": true,
+    "unit_tests_passed": true,
+    "unit_test_count": 4,
+    "unit_receipt_id": "374898d1bc3b43fdb7fabe3e41e57678",
+    "acceptance_cases": [
+      {
+        "name": "ordinary name",
+        "passed": true,
+        "receipt_id": "6a30c869efa54e0e9451151fb7bad528",
+        "mismatches": []
+      },
+      {
+        "name": "uppercase",
+        "passed": true,
+        "receipt_id": "568854161558486586c3e6e7e40604fa",
+        "mismatches": []
+      },
+      {
+        "name": "Unicode",
+        "passed": true,
+        "receipt_id": "a085466080ed4228890b6758bac6d157",
+        "mismatches": []
+      }
+    ],
+    "independent_acceptance_passed": true,
+    "source_unchanged": true,
+    "source_fingerprint": "86edfe3af02db42874f67b9f3c8c0ad9eb976d01ba6fe75f41b3a6099bc09b37",
+    "scope": "operator_acceptance_and_model_tests",
+    "unit_feedback": {
+      "stdout": "",
+      "stderr": "test_regular_name (test_greeting.TestGreeting.test_regular_name) ... ok\r\ntest_unicode (test_greeting.TestGreeting.test_unicode) ... ok\r\ntest_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase) ... ok\r\ntest_uppercase (test_greeting.TestGreeting.test_uppercase) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.000s\r\n\r\nOK\r\n",
+      "exit_code": 0,
+      "timed_out": false,
+      "error": null
+    }
+  },
+  "acceptance": {
+    "cases": [
+      {
+        "name": "ordinary name",
+        "args": [
+          "Ada"
+        ],
+        "stdout": "Hello, Ada!\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "name": "uppercase",
+        "args": [
+          "Ada",
+          "--upper"
+        ],
+        "stdout": "HELLO, ADA!\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "name": "Unicode",
+        "args": [
+          "Zoë"
+        ],
+        "stdout": "Hello, Zoë!\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    ],
+    "provenance": "codex_authored_independent_validation_fixture"
+  },
+  "limitations": [],
+  "decisions": [
+    {
+      "at": "2026-10-15T12:17:17.881206+00:00",
+      "kind": "generating",
+      "call_id": "generating-8a6eb78ee9b8"
+    },
+    {
+      "at": "2026-10-15T12:19:52.604694+00:00",
+      "provenance": "codex_validation_fault_injection",
+      "path": "greeting.py",
+      "reason": "Exercise failed execution, persisted state, live Qwen diagnosis and targeted repair",
+      "before_sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04",
+      "after_sha256": "2f8abd22572fa8e00ddc425df3a4593c01251e9366d68ad8b757c12a00067314",
+      "original_source": "def greet(name, uppercase=False):\n    greeting = f\"Hello, {name}!\"\n    if uppercase:\n        greeting = greeting.upper()\n    return greeting",
+      "injected_source": "def greet(name, uppercase=False):\n    greeting = f\"Hello, {name}!\"\n    if uppercase:\n        greeting = greeting.lower()\n    return greeting",
+      "prior_verification_id": "ac278d2b872c"
+    },
+    {
+      "at": "2026-10-15T12:19:55.562246+00:00",
+      "kind": "correcting",
+      "call_id": "correcting-7dc181f91482"
+    }
+  ],
+  "stack": "python-stdlib",
+  "test_policy": {
+    "command": [
+      "{python}",
+      "-I",
+      "-B",
+      "{qasc_runner}",
+      "--project",
+      "{project}",
+      "--result",
+      "{result_json}"
+    ],
+    "origin": "qasc_fixed_runner",
+    "model_tests_frozen": true
+  },
+  "deliveries": [
+    {
+      "kind": "source_archive",
+      "created_at": "2026-10-15T12:24:23.296832+00:00",
+      "project": "qwen-greeting",
+      "revision": "0002-623766c3",
+      "verification_id": "cec26198ab4a",
+      "verification_scope": "operator_acceptance_and_model_tests",
+      "entrypoint": "app.py",
+      "runtime": "Python >=3.11",
+      "files": [
+        {
+          "path": "app.py",
+          "sha256": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa"
+        },
+        {
+          "path": "greeting.py",
+          "sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04"
+        },
+        {
+          "path": "tests/test_greeting.py",
+          "sha256": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+        }
+      ],
+      "provenance": "automatically_generated_delivery_artifact",
+      "path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\deliveries\\qwen-greeting-cec26198ab4a.zip",
+      "sha256": "9c03fa59713e4f657f39b8ffb96b695526b7764ffeb17a48964d0efb042951b3",
+      "archive_verified": true,
+      "executable_created": false,
+      "installer_created": false
+    }
+  ]
+}

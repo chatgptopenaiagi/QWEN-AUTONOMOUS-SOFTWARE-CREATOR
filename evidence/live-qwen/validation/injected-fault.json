@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-15T12:19:52.604694+00:00",
+  "provenance": "codex_validation_fault_injection",
+  "path": "greeting.py",
+  "reason": "Exercise failed execution, persisted state, live Qwen diagnosis and targeted repair",
+  "before_sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04",
+  "after_sha256": "2f8abd22572fa8e00ddc425df3a4593c01251e9366d68ad8b757c12a00067314",
+  "original_source": "def greet(name, uppercase=False):\n    greeting = f\"Hello, {name}!\"\n    if uppercase:\n        greeting = greeting.upper()\n    return greeting",
+  "injected_source": "def greet(name, uppercase=False):\n    greeting = f\"Hello, {name}!\"\n    if uppercase:\n        greeting = greeting.lower()\n    return greeting",
+  "prior_verification_id": "ac278d2b872c"
+}

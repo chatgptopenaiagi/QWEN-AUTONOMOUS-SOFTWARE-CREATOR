@@ -1,0 +1,26 @@
+{
+  "qasc_version": "0.1.0",
+  "adapters": [
+    {
+      "adapter": "llama.cpp-openai-compatible",
+      "base_url": "http://127.0.0.1:8080",
+      "model": "qwen3-coder-local",
+      "model_ids": [
+        "qwen3-coder-local"
+      ],
+      "available": true,
+      "context_size": 8192,
+      "capabilities": {
+        "text_generation": true,
+        "structured_responses": true,
+        "tool_call_requests": true,
+        "token_accounting_when_available": true,
+        "inference_timings_when_available": true
+      },
+      "health": {
+        "status": "ok"
+      },
+      "errors": {}
+    }
+  ]
+}

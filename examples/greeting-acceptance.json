@@ -1,0 +1,7 @@
+{
+  "cases": [
+    {"name": "ordinary name", "args": ["Ada"], "stdout": "Hello, Ada!\n", "stderr": "", "exit_code": 0},
+    {"name": "uppercase", "args": ["Ada", "--upper"], "stdout": "HELLO, ADA!\n", "stderr": "", "exit_code": 0},
+    {"name": "Unicode", "args": ["Zoë"], "stdout": "Hello, Zoë!\n", "stderr": "", "exit_code": 0}
+  ]
+}

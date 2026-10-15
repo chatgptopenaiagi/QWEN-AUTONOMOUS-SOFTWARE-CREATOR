@@ -1,0 +1,30 @@
+{
+  "kind": "source_archive",
+  "created_at": "2026-10-15T12:24:23.296832+00:00",
+  "project": "qwen-greeting",
+  "revision": "0002-623766c3",
+  "verification_id": "cec26198ab4a",
+  "verification_scope": "operator_acceptance_and_model_tests",
+  "entrypoint": "app.py",
+  "runtime": "Python >=3.11",
+  "files": [
+    {
+      "path": "app.py",
+      "sha256": "6906e48b213fe2feae44fd8eb80bd2eda5e82e618cc2e951304c6887629990fa"
+    },
+    {
+      "path": "greeting.py",
+      "sha256": "d4e99e5f7c1b77a0de20b6eb481e441163e54dd65ac618783f53c9f87e1a5a04"
+    },
+    {
+      "path": "tests/test_greeting.py",
+      "sha256": "5a16504fe04abe6390f47fa838eee4b4620c9275f1dbafac8dfa5e15dd463207"
+    }
+  ],
+  "provenance": "automatically_generated_delivery_artifact",
+  "path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\deliveries\\qwen-greeting-cec26198ab4a.zip",
+  "sha256": "9c03fa59713e4f657f39b8ffb96b695526b7764ffeb17a48964d0efb042951b3",
+  "archive_verified": true,
+  "executable_created": false,
+  "installer_created": false
+}

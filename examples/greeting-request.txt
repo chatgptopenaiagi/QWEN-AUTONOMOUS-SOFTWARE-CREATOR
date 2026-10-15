@@ -1,0 +1,6 @@
+Create a small Python command-line greeting application. Its entrypoint must be app.py.
+Accept exactly one required positional argument called name. Print Hello, <name>! followed by a newline.
+Support an optional --upper flag that uppercases the entire greeting.
+Put reusable greeting logic in greeting.py and use argparse in app.py.
+Provide unittest tests in tests/test_greeting.py for regular names, Unicode, and uppercase output.
+Use only the Python standard library.

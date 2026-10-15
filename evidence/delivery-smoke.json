@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-15T12:25:04.263011+00:00",
+  "archive_sha256": "9c03fa59713e4f657f39b8ffb96b695526b7764ffeb17a48964d0efb042951b3",
+  "expected_stdout": "HELLO, ADA!\n",
+  "passed": true,
+  "execution": {
+    "schema_version": 1,
+    "receipt_id": "60a774f37a5a4a3498052248ba52cbc2",
+    "id": "60a774f37a5a4a3498052248ba52cbc2",
+    "command": [
+      "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "app.py",
+      "Ada",
+      "--upper"
+    ],
+    "cwd": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\delivery-smoke\\qwen-greeting",
+    "started_at": "2026-10-15T12:25:04.111487Z",
+    "finished_at": "2026-10-15T12:25:04.233167Z",
+    "elapsed_seconds": 0.121649,
+    "timeout_seconds": 15,
+    "stdin": null,
+    "stdout": "HELLO, ADA!\r\n",
+    "stderr": "",
+    "stdout_truncated": false,
+    "stderr_truncated": false,
+    "stdout_bytes": 13,
+    "stderr_bytes": 0,
+    "exit_code": 0,
+    "timed_out": false,
+    "interrupted": false,
+    "error": null,
+    "capture_errors": [],
+    "capture_incomplete": false,
+    "termination_error": null,
+    "changes": {
+      "added": [],
+      "modified": [],
+      "deleted": []
+    },
+    "inventory_errors": {
+      "before": [],
+      "after": []
+    },
+    "receipt_path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\delivery-smoke\\qwen-greeting\\.qasc\\executions\\60a774f37a5a4a3498052248ba52cbc2.json"
+  }
+}

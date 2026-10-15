@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "receipt_id": "348ed03051f047ac9d63100859bdea1a",
+  "id": "348ed03051f047ac9d63100859bdea1a",
+  "command": [
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "-X",
+    "pycache_prefix=I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\runtime\\4487bbabc51c428abfb6eb9e3d810301",
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\src\\qasc\\runner.py",
+    "--project",
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting",
+    "--result",
+    "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\verifications\\runner-9e1d406765f94d0b81ab1ffd92a442c7.json"
+  ],
+  "cwd": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting",
+  "started_at": "2026-10-15T12:19:53.690483Z",
+  "finished_at": "2026-10-15T12:19:54.437203Z",
+  "elapsed_seconds": 0.746703,
+  "timeout_seconds": 30,
+  "stdin": null,
+  "stdout": "",
+  "stderr": "test_regular_name (test_greeting.TestGreeting.test_regular_name) ... ok\r\ntest_unicode (test_greeting.TestGreeting.test_unicode) ... ok\r\ntest_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase) ... FAIL\r\ntest_uppercase (test_greeting.TestGreeting.test_uppercase) ... FAIL\r\n\r\n======================================================================\r\nFAIL: test_unicode_uppercase (test_greeting.TestGreeting.test_unicode_uppercase)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\tests\\test_greeting.py\", line 22, in test_unicode_uppercase\r\n    self.assertEqual(greet(\"Zoë\", uppercase=True), \"HELLO, ZOË!\")\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: 'hello, zoë!' != 'HELLO, ZOË!'\r\n- hello, zoë!\r\n+ HELLO, ZOË!\r\n\r\n\r\n======================================================================\r\nFAIL: test_uppercase (test_greeting.TestGreeting.test_uppercase)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\tests\\test_greeting.py\", line 16, in test_uppercase\r\n    self.assertEqual(greet(\"Ada\", uppercase=True), \"HELLO, ADA!\")\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: 'hello, ada!' != 'HELLO, ADA!'\r\n- hello, ada!\r\n+ HELLO, ADA!\r\n\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.004s\r\n\r\nFAILED (failures=2)\r\n",
+  "stdout_truncated": false,
+  "stderr_truncated": false,
+  "stdout_bytes": 0,
+  "stderr_bytes": 1604,
+  "exit_code": 1,
+  "timed_out": false,
+  "interrupted": false,
+  "error": null,
+  "capture_errors": [],
+  "capture_incomplete": false,
+  "termination_error": null,
+  "changes": {
+    "added": [],
+    "modified": [],
+    "deleted": []
+  },
+  "inventory_errors": {
+    "before": [],
+    "after": []
+  },
+  "receipt_path": "I:\\QWEN-AUTONOMOUS-SOFTWARE-CREATOR\\projects\\qwen-greeting\\.qasc\\executions\\348ed03051f047ac9d63100859bdea1a.json"
+}
